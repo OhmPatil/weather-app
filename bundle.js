@@ -1,10 +1,19 @@
 /******/ (() => { // webpackBootstrap
 var __webpack_exports__ = {};
+const body = document.querySelector('body');
+
 async function getWeather(query){
     console.log('fetching....');
+    
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=50d99f6178ee7c1bef864146a9cfefe2&units=metric`, {mode: 'cors'});
     const data = await response.json();
     console.log(data);
+
+    if(data.cod === '404'){
+        alert('City not found!');
+        return
+    }
+    body.removeAttribute('class');
     const city = data.name;
     const country = data.sys.country;
     const temp = data.main.temp;
@@ -13,6 +22,7 @@ async function getWeather(query){
     const weatherTitle = data.weather[0].main;
     const weatherDesc = data.weather[0].description;
 
+    changeBackground(weatherTitle);
     displayWeather(city, country, temp, feelsLike, humidity, weatherTitle, weatherDesc);
 }
 
@@ -62,5 +72,11 @@ function displayWeather(_city_, _country_, _temp_, _feelslike_, _humidity_, _wea
 }
 
 // displayWeather('London', 'UK', '10', '10', '10', 'Sunny', 'Sunny');
+
+function changeBackground(weather){
+    if (weather === 'Clouds' || weather === 'Rain'){
+        body.classList.add('clouds')
+    }
+}
 /******/ })()
 ;

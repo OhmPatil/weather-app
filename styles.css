@@ -2,12 +2,17 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body{
+    background-color: #0093E9;
+    background-image: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%);
+    transition: background-color 1s ease-in 0s;
+}
+
 #header{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
-    background-color: black;
+    background-color: rgba(0, 0, 0, .75);
     color: white;
     height: 10vh;
     font-size: 1.5rem;
@@ -19,14 +24,14 @@
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
-    border: 5px solid red;
     height: 90vh;
 }
 
 input{
-    height: 1.5rem;
+    height: 2rem;
     width: 250px;
-    background-color: lightgrey;
+    background-color: rgba(0, 0, 0, .25);
+    color: white;
     border-radius: 25px;
     padding-left: 10px;
     font-size: .9rem;
@@ -34,11 +39,18 @@ input{
 }
 
 button{
-    height: 1.5rem;
+    height: 2rem;
     font-size: 0.9rem;
     width: 100px;
     border-radius: 20px;
     border: none;
+    background-color: rgba(0, 0, 0, .25);
+    color: white;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
 }
 
 
@@ -56,11 +68,15 @@ button{
     padding-top: 20px;
     padding-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: white;
+    background-color: rgba(0, 0, 0, .35);
+
 }
 
 .location{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
+    color: peachpuff;
 }
 
 .current-temp{
@@ -69,16 +85,23 @@ button{
 }
 
 .feels-like{
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 .humidity{
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .weather{
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+/* backgrounds */
+
+.clouds{
+    background-color: #5b6467;
+    background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
 }

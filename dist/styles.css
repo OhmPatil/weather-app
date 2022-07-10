@@ -10,7 +10,7 @@
     background-color: black;
     color: white;
     height: 10vh;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -23,12 +23,62 @@
     height: 90vh;
 }
 
+input{
+    height: 1.5rem;
+    width: 250px;
+    background-color: lightgrey;
+    border-radius: 25px;
+    padding-left: 10px;
+    font-size: .9rem;
+    border: none;
+}
+
+button{
+    height: 1.5rem;
+    font-size: 0.9rem;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+}
+
+
+
+/* Main weather stuff */
 .weather-container{
     margin-top: 20px;
-    border: 2px solid black;
-    height: 500px;
+    border-radius: 20px;
+    height: 275px;
     width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.location{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.current-temp{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.feels-like{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.humidity{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.weather{
+    font-size: 1.25rem;
+    font-weight: 600;
 }

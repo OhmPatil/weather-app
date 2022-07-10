@@ -15,8 +15,9 @@ body{
     background-color: rgba(0, 0, 0, .75);
     color: white;
     height: 10vh;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
+    padding: 5px;
 }
 
 #main-container{
@@ -29,7 +30,7 @@ body{
 
 input{
     height: 2rem;
-    width: 250px;
+    width: 200px;
     background-color: rgba(0, 0, 0, .25);
     color: white;
     border-radius: 25px;
@@ -60,7 +61,7 @@ button:hover{
     margin-top: 20px;
     border-radius: 20px;
     height: 275px;
-    width: 500px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;

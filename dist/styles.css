@@ -1,0 +1,34 @@
+:root{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    height: 10vh;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    border: 5px solid red;
+    height: 90vh;
+}
+
+.weather-container{
+    margin-top: 20px;
+    border: 2px solid black;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

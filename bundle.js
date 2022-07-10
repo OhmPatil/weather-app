@@ -2,6 +2,7 @@
 var __webpack_exports__ = {};
 const body = document.querySelector('body');
 
+// Async function to get weather data through API
 async function getWeather(query){
     console.log('fetching....');
     
@@ -9,10 +10,13 @@ async function getWeather(query){
     const data = await response.json();
     console.log(data);
 
+    // If city doesnt exist, return
     if(data.cod === '404'){
         alert('City not found!');
         return
     }
+
+    // Get data from API and pass to display function
     body.removeAttribute('class');
     const city = data.name;
     const country = data.sys.country;
@@ -26,14 +30,7 @@ async function getWeather(query){
     displayWeather(city, country, temp, feelsLike, humidity, weatherTitle, weatherDesc);
 }
 
-const form = document.querySelector('form');
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const query = form.querySelector('input').value;
-    getWeather(query);
-    form.reset();
-})
-
+// Display weather data to DOM
 function displayWeather(_city_, _country_, _temp_, _feelslike_, _humidity_, _weathertitle_, _weatherdesc_){
 
     if(document.querySelector('.weather-container')){
@@ -73,10 +70,20 @@ function displayWeather(_city_, _country_, _temp_, _feelslike_, _humidity_, _wea
 
 // displayWeather('London', 'UK', '10', '10', '10', 'Sunny', 'Sunny');
 
+// Change background based on weather
 function changeBackground(weather){
     if (weather === 'Clouds' || weather === 'Rain'){
         body.classList.add('clouds')
     }
 }
+
+// Form handler
+const form = document.querySelector('form');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const query = form.querySelector('input').value;
+    getWeather(query);
+    form.reset();
+})
 /******/ })()
 ;

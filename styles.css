@@ -1,11 +1,15 @@
 :root{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
     background-color: #0093E9;
     background-image: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%);
-    transition: background-color 1s ease-in 0s;
+}
+
+#app{
+    width: 100vw;
+    height: 100vh;
 }
 
 #header{
@@ -14,7 +18,7 @@ body{
     justify-content: center;
     background-color: rgba(0, 0, 0, .75);
     color: white;
-    height: 10vh;
+    height: 10%;
     font-size: 2rem;
     font-weight: 600;
     padding: 5px;
@@ -25,7 +29,7 @@ body{
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
-    height: 90vh;
+    height: 80%;
 }
 
 input{
@@ -60,7 +64,7 @@ button:hover{
 .weather-container{
     margin-top: 20px;
     border-radius: 20px;
-    height: 275px;
+    height: auto;
     width: 400px;
     display: flex;
     flex-direction: column;

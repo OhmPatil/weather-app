@@ -82,6 +82,7 @@ button:hover{
     font-size: 2rem;
     font-weight: 600;
     color: peachpuff;
+    text-align: center;
 }
 
 .current-temp{
